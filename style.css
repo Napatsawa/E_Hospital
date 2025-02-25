@@ -51,7 +51,7 @@ nav {
 }
 
 .banner-info img{
-    width: 300px;
+    width: 150px;
     border-radius: 10%;
 }
 main{
@@ -60,7 +60,10 @@ main{
 }
 
 main div{
+    background-color: lightpink;
+    color: #fff;
     padding: 20px;
+    font-family: 'Kanit', sans-serif;
 }
 
 main img{
