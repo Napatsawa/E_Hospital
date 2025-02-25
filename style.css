@@ -54,3 +54,16 @@ nav {
     width: 300px;
     border-radius: 10%;
 }
+main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+main div{
+    padding: 20px;
+}
+
+main img{
+    width: 99%;
+    border-radius: 20px;
+}
