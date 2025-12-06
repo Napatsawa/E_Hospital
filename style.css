@@ -32,6 +32,12 @@ nav {
     text-decoration: none;
     color: palevioletred;
     font-family: 'Kanit', sans-serif;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover{
+    color: #d14781;
 }
 
 .banner{
@@ -55,11 +61,12 @@ nav {
 }
 main{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     padding: 20px;
     max-width: 100vw;
     box-sizing: border-box;
+    
 }
 
 @media (max-width: 768px) {
@@ -97,7 +104,7 @@ main{
 
 main div{
     background-color: lightpink;
-    color: #fff;
+    color: #4b0033;
     padding: 15px;
     text-align: center;
     font-family: 'Kanit', sans-serif;
@@ -107,6 +114,7 @@ main div{
 main img{
     width: 100%;
     border-radius: 12px;
+    
 }
 
 .how-to-play{
@@ -141,6 +149,55 @@ main img{
     border-radius: 12px;
     margin-bottom: 10px;
 }
+
+.news {
+    background: linear-gradient(135deg, #b8ffb8, #d4ffd4);
+    color: #170167;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    max-width: 700px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+/* อนิเมชั่น fade-in หลัก */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* กล่องข่าวแต่ละอัน animate ทีละอัน */
+.news-info {
+    opacity: 0;
+    padding: 12px;
+    margin: 10px 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+
+    /* เรียกใช้ animation */
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* กล่องแรกเริ่มก่อน */
+.news-info:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+/* กล่องสองเริ่มทีหลัง */
+.news-info:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
 
 footer{
     background-color: #ddd;
